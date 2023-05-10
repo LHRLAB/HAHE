@@ -1,4 +1,15 @@
-# HAHE: Hierarchical Attention for Hyper-Relational Knowledge Graphs
+# HAHE
+
+Official resources of **"HAHE: Hierarchical Attention for Hyper-Relational Knowledge Graphs in Global and Local Level"**. Haoran Luo, Haihong E, Yuhao Yang, Yikai Guo, Mingzhi Sun, Tianyu Yao, Zichen Tang, Kaiyang Wan, Meina Song, Wei Lin. **ACL 2023** \[[paper](www.baidu.com)\]. 
+
+## Overview
+The Global-level Hypergraph-based representation and Local-level Sequence-based representation based
+on three examples of H-Facts in HKGs:
+![](./figs/1.png)
+
+ The overview of HAHE model for Global-level and Local-level Representation of HKGs:
+![](./figs/2.png)
+
 ## Introduction
 
 This is the [Pytorch](https://pytorch.org/) implementation of HAHE, a novel Hierarchical Attention model for
@@ -78,3 +89,18 @@ If run.py is not modified, you can simply run:
 ```
 python -u ./src/run.py --name "TEST-wd50k"
 ```
+
+## BibTex
+
+If you find this work is helpful for your research, please cite:
+
+```bibtex
+@article{luo2022nqe,
+  title={NQE: N-ary Query Embedding for Complex Query Answering over Hyper-Relational Knowledge Graphs},
+  author={Luo, Haoran and E, Haihong and Yang, Yuhao and Zhou, Gengxian and Guo, Yikai and Yao, Tianyu and Tang, Zichen and Lin, Xueyuan and Wan, Kaiyang},
+  journal={arXiv preprint arXiv:2211.13469},
+  year={2022}
+}
+```
+
+For further questions, please contact: luohaoran@bupt.edu.cn, or wechat: lhr1846205978.
