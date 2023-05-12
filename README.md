@@ -1,6 +1,6 @@
 # HAHE
 
-Official resources of **"HAHE: Hierarchical Attention for Hyper-Relational Knowledge Graphs in Global and Local Level"**. Haoran Luo, Haihong E, Yuhao Yang, Yikai Guo, Mingzhi Sun, Tianyu Yao, Zichen Tang, Kaiyang Wan, Meina Song, Wei Lin. **ACL 2023** \[[paper](www.baidu.com)\]. 
+Official resources of **"HAHE: Hierarchical Attention for Hyper-Relational Knowledge Graphs in Global and Local Level"**. Haoran Luo, Haihong E, Yuhao Yang, Yikai Guo, Mingzhi Sun, Tianyu Yao, Zichen Tang, Kaiyang Wan, Meina Song, Wei Lin. **ACL 2023** \[[paper](https://arxiv.org/abs/2305.06588)\]. 
 
 ## Overview
 The Global-level Hypergraph-based representation and Local-level Sequence-based representation based
@@ -95,12 +95,13 @@ python -u ./src/run.py --name "TEST-wd50k"
 If you find this work is helpful for your research, please cite:
 
 ```bibtex
-@article{luo2022nqe,
-  title={NQE: N-ary Query Embedding for Complex Query Answering over Hyper-Relational Knowledge Graphs},
-  author={Luo, Haoran and E, Haihong and Yang, Yuhao and Zhou, Gengxian and Guo, Yikai and Yao, Tianyu and Tang, Zichen and Lin, Xueyuan and Wan, Kaiyang},
-  journal={arXiv preprint arXiv:2211.13469},
-  year={2022}
-}
+@misc{luo2023hahe,
+      title={HAHE: Hierarchical Attention for Hyper-Relational Knowledge Graphs in Global and Local Level}, 
+      author={Haoran Luo and Haihong E and Yuhao Yang and Yikai Guo and Mingzhi Sun and Tianyu Yao and Zichen Tang and Kaiyang Wan and Meina Song and Wei Lin},
+      year={2023},
+      eprint={2305.06588},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI}
 ```
 
 For further questions, please contact: luohaoran@bupt.edu.cn, or wechat: lhr1846205978.
