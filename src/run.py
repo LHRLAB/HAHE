@@ -57,15 +57,16 @@ parser.add_argument("--use_edge", type=bool, default=True) # wheather to use edg
 parser.add_argument("--use_node", type=bool, default=False) # wheather to use node bias
 
 # directory position settings
+parser.add_argument("--result_save_dir", type=str, default="results")
 parser.add_argument("--ckpt_save_dir", type=str, default="ckpts")
 
 args = parser.parse_args()
 args.num_entities = args.vocab_size - args.num_relations - 2
-if not os.path.exists('results'):
-    os.mkdir('results')
-if not os.path.exists('ckpt'):
-    os.mkdir('ckpt')
-dir_name = "results/" + args.dataset
+if not os.path.exists(args.result_save_dir):
+    os.mkdir(args.result_save_dir)
+if not os.path.exists(args.ckpt_save_dir):
+    os.mkdir(args.ckpt_save_dir)
+dir_name = os.path.join(args.result_save_dir,args.dataset)
 if not os.path.exists(dir_name):
     os.mkdir(dir_name)
 logging.basicConfig(
