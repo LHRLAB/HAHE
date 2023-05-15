@@ -18,38 +18,38 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--name", type=str, default="TEST")
 
 # Dataset information
-parser.add_argument("--dataset", type=str, default="wd50k")
-parser.add_argument("--vocab_size", type=int, default=47688)
-parser.add_argument("--vocab_file", type=str, default="./data/wd50k/vocab.txt")
-parser.add_argument("--train_file", type=str, default="./data/wd50k/train.json")
-parser.add_argument("--test_file", type=str, default="./data/wd50k/test.json")
-parser.add_argument("--ground_truth_file", type=str, default="./data/wd50k/all.json")
+parser.add_argument("--dataset", type=str, default="wd50k") #"jf17k", 
+parser.add_argument("--vocab_size", type=int, default=47688) #29148
+parser.add_argument("--vocab_file", type=str, default="./data/wd50k/vocab.txt") #"./data/jf17k/vocab.txt"
+parser.add_argument("--train_file", type=str, default="./data/wd50k/train.json") #"./data/jf17k/train.json"
+parser.add_argument("--test_file", type=str, default="./data/wd50k/test.json") #"./data/jf17k/test.json"
+parser.add_argument("--ground_truth_file", type=str, default="./data/wd50k/all.json") #"./data/jf17k/all.json"
 parser.add_argument("--num_workers", type=int, default=1)
-parser.add_argument("--num_relations", type=int, default=531)
-parser.add_argument("--max_seq_len", type=int, default=63)
-parser.add_argument("--max_arity", type=int, default=32)
+parser.add_argument("--num_relations", type=int, default=531) #501
+parser.add_argument("--max_seq_len", type=int, default=63) #11
+parser.add_argument("--max_arity", type=int, default=32) #6
 
 # Hyperparameter
 parser.add_argument("--hidden_dim", type=int, default=256)
 parser.add_argument("--global_layers", type=int,  default=2)
-parser.add_argument("--global_dropout", type=float, default=0.1)
+parser.add_argument("--global_dropout", type=float, default=0.1) # 0.2
 parser.add_argument("--global_activation", type=str, default="elu") # relu, elu, gelu, tanh
-parser.add_argument("--global_heads", type=int,  default=4)
-parser.add_argument("--local_layers", type=int,  default=12)
-parser.add_argument("--local_dropout", type=float, default=0.1)
-parser.add_argument("--local_heads", type=int, default=4)
+parser.add_argument("--global_heads", type=int,  default=4) # 4
+parser.add_argument("--local_layers", type=int,  default=12) # 12
+parser.add_argument("--local_dropout", type=float, default=0.1) # 0.2
+parser.add_argument("--local_heads", type=int, default=4) # 4
 parser.add_argument("--decoder_activation", type=str, default="gelu") # relu, elu, gelu, tanh
-parser.add_argument("--batch_size", type=int, default=1024)
-parser.add_argument("--lr", type=float, default=5e-4)
+parser.add_argument("--batch_size", type=int, default=1024) # 1024
+parser.add_argument("--lr", type=float, default=5e-4) # 5e-4
 parser.add_argument("--weight_decay", type=float, default=0.01)
-parser.add_argument("--entity_soft", type=float, default=0.8)
-parser.add_argument("--relation_soft", type=float, default=0.9)
+parser.add_argument("--entity_soft", type=float, default=0.8) # 0.9
+parser.add_argument("--relation_soft", type=float, default=0.9) # 0.0
 parser.add_argument("--hyperedge_dropout", type=float, default=0.0) # dropout rate of hyperedge learning
 parser.add_argument("--device", type=str, default="0123") # {0123}^n,1<=n<=4,the first cuda is used as master device and others are used for data parallel
 parser.add_argument("--remove_mask", type=bool, default=False) # wheather to use extra mask
 
 # others for training
-parser.add_argument("--epoch", type=int, default=100)
+parser.add_argument("--epoch", type=int, default=100) # 200
 parser.add_argument("--warmup_proportion", type=float, default=0.1)
 
 # Ablation experiment
