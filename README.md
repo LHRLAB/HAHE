@@ -93,12 +93,12 @@ For Wikipeople, to train and evalute on this dataset using default hyperparamete
 
 ```
 python -u ./src/run.py --dataset "wikipeople" --device "0" --vocab_size 35005 --vocab_file "./data/wikipeople/vocab.txt" \
-                       --train_file "./data/wikipeople/train.json" --test_file "./data/wikipeople/test.json" \
+                       --train_file "./data/wikipeople/train+valid.json" --test_file "./data/wikipeople/test.json" \
                        --ground_truth_file "./data/wikipeople/all.json" --num_workers 1 --num_relations 178 \
                        --max_seq_len 13 --max_arity 7 --hidden_dim 256 --global_layers 2 \
                        --global_dropout 0.1 --global_activation "elu" --global_heads 4 --local_layers 12\
                        --local_dropout 0.1 --local_heads 4 --decoder_activation "gelu" --batch_size 1024 \
-                       --lr 5e-4 --weight_deca 0.01 --entity_soft 0.8 --relation_soft 0.9 \
+                       --lr 5e-4 --weight_deca 0.01 --entity_soft 0.2 --relation_soft 0.1 \
                        --hyperedge_dropout 0.99 --epoch 300 --warmup_proportion 0.1
 ```
 
@@ -106,12 +106,12 @@ For WD50K, to train and evalute on this dataset using default hyperparametes, pl
 
 ```
 python -u ./src/run.py --dataset "wd50k" --device "0" --vocab_size 47688 --vocab_file "./data/wd50k/vocab.txt" \
-                       --train_file "./data/wd50k/train.json" --test_file "./data/wd50k/test.json" \
+                       --train_file "./data/wd50k/train+valid.json" --test_file "./data/wd50k/test.json" \
                        --ground_truth_file "./data/wd50k/all.json" --num_workers 1 --num_relations 531 \
                        --max_seq_len 63 --max_arity 32 --hidden_dim 256 --global_layers 2 \
                        --global_dropout 0.1 --global_activation "elu" --global_heads 4 --local_layers 12\
                        --local_dropout 0.1 --local_heads 4 --decoder_activation "gelu" --batch_size 64 \
-                       --lr 5e-4 --weight_deca 0.01 --entity_soft 0.8 --relation_soft 0.9 \
+                       --lr 5e-4 --weight_deca 0.01 --entity_soft 0.2 --relation_soft 0.1 \
                        --hyperedge_dropout 0.0 --epoch 100 --warmup_proportion 0.1
 ```
 

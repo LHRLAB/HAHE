@@ -41,8 +41,8 @@ parser.add_argument("--decoder_activation", type=str, default="gelu") # relu, el
 parser.add_argument("--batch_size", type=int, default=1024) # 1024
 parser.add_argument("--lr", type=float, default=5e-4) # 5e-4
 parser.add_argument("--weight_decay", type=float, default=0.01)
-parser.add_argument("--entity_soft", type=float, default=0.8) # 0.9
-parser.add_argument("--relation_soft", type=float, default=0.9) # 0.0
+parser.add_argument("--entity_soft", type=float, default=0.2) # 0.9
+parser.add_argument("--relation_soft", type=float, default=0.1) # 0.0
 parser.add_argument("--hyperedge_dropout", type=float, default=0.0) # dropout rate of hyperedge learning
 parser.add_argument("--device", type=str, default="0123") # {0123}^n,1<=n<=4,the first cuda is used as master device and others are used for data parallel
 parser.add_argument("--remove_mask", type=bool, default=False) # wheather to use extra mask
