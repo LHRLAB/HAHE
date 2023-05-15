@@ -58,8 +58,6 @@ Then we convert the raw data into the required format for training and evaluatio
 To train and evaluate the HAHE model, please run:
 
 ```
-mkdir ckpts
-mkdir results
 python -u ./src/run.py --name [TEST_NAME] --device [GPU_ID] -vocab_size [VOCAB_SIZE] --vocab_file [VOCAB_FILE] \
                        --train_file [TRAIN_FILE] --test_file [TEST_FILE] --ground_truth_file [GROUND_TRUTH_FILE] \
                        --num_workers [NUM_WORKERS] --num_relations [NUM_RELATIONS] \
@@ -111,7 +109,7 @@ python -u ./src/run.py --dataset "wd50k" --device "0" --vocab_size 47688 --vocab
                        --ground_truth_file "./data/wd50k/all.json" --num_workers 1 --num_relations 531 \
                        --max_seq_len 63 --max_arity 32 --hidden_dim 256 --global_layers 2 \
                        --global_dropout 0.1 --global_activation "elu" --global_heads 4 --local_layers 12\
-                       --local_dropout 0.1 --local_heads 4 --decoder_activation "gelu" --batch_size 1024 \
+                       --local_dropout 0.1 --local_heads 4 --decoder_activation "gelu" --batch_size 64 \
                        --lr 5e-4 --weight_deca 0.01 --entity_soft 0.8 --relation_soft 0.9 \
                        --hyperedge_dropout 0.0 --epoch 100 --warmup_proportion 0.1
 ```
