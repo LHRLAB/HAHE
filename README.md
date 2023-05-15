@@ -47,6 +47,7 @@ We consider three representative n-ary relational datasets, and the datasets can
 Then we convert the raw data into the required format for training and evaluation. The new data is organized into a directory named `data`, with a sub-directory for each dataset. In general, a sub-directory contains:
 - `train.json`: train set
 - `valid.json`: dev set
+- `train+valid.json`: train set + dev set
 - `test.json`: test set
 - `all.json`: combination of train/dev/test sets, used only for *filtered* evaluation
 - `vocab.txt`: vocabulary consisting of entities, relations, and special tokens like [MASK] and [PAD]
