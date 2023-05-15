@@ -87,7 +87,7 @@ python -u ./src/run.py --dataset "jf17k" --device "0" --vocab_size 29148 --vocab
                        --global_dropout 0.2 --global_activation "elu" --global_heads 4 --local_layers 12\
                        --local_dropout 0.2 --local_heads 4 --decoder_activation "gelu" --batch_size 1024 \
                        --lr 5e-4 --weight_deca 0.01 --entity_soft 0.9 --relation_soft 0.0 \
-                       --hyperedge_dropout 0.0 --epoch 200 --warmup_proportion 0.1
+                       --hyperedge_dropout 0.0 --epoch 300 --warmup_proportion 0.1
 ```
 
 For Wikipeople, to train and evalute on this dataset using default hyperparametes, please run:

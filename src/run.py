@@ -15,7 +15,6 @@ from transformer import *
 from graph import *
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--name", type=str, default="TEST")
 
 # Dataset information
 parser.add_argument("--dataset", type=str, default="wd50k") #"jf17k", 
@@ -55,14 +54,14 @@ parser.add_argument("--warmup_proportion", type=float, default=0.1)
 # Ablation experiment
 parser.add_argument("--use_global", type=bool, default=True) # wheather to use global component
 parser.add_argument("--use_edge", type=bool, default=True) # wheather to use edge bias
-parser.add_argument("--use_node", type=bool, default=False) # wheather to use global bias
+parser.add_argument("--use_node", type=bool, default=False) # wheather to use node bias
 
 # directory position settings
 parser.add_argument("--ckpt_save_dir", type=str, default="ckpts")
 
 args = parser.parse_args()
 args.num_entities = args.vocab_size - args.num_relations - 2
-dir_name = "results/" + args.name + "-" + args.dataset
+dir_name = "results/" + args.dataset
 if not os.path.exists(dir_name):
     os.mkdir(dir_name)
 logging.basicConfig(
@@ -143,8 +142,7 @@ def main(limit=1e9):
                 vocabulary=vocabulary,
                 device=device)
             show_perforamance(eval_performance)
-            Exp_name_params = [ 
-                args.name,
+            Exp_name_params = [
                 args.dataset,
                 "epoch_"+str(epoch),
             ]
