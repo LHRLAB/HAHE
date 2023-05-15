@@ -61,6 +61,10 @@ parser.add_argument("--ckpt_save_dir", type=str, default="ckpts")
 
 args = parser.parse_args()
 args.num_entities = args.vocab_size - args.num_relations - 2
+if not os.path.exists('result'):
+    os.mkdir('result')
+if not os.path.exists('ckpt'):
+    os.mkdir('ckpt')
 dir_name = "results/" + args.dataset
 if not os.path.exists(dir_name):
     os.mkdir(dir_name)
