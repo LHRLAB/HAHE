@@ -52,9 +52,9 @@ parser.add_argument("--epoch", type=int, default=100) # 200
 parser.add_argument("--warmup_proportion", type=float, default=0.1)
 
 # Ablation experiment
-parser.add_argument("--use_global", type=bool, default=True) # wheather to use global component
-parser.add_argument("--use_edge", type=bool, default=True) # wheather to use edge bias
-parser.add_argument("--use_node", type=bool, default=False) # wheather to use node bias
+parser.add_argument("--use_global", type=bool, default=True)
+parser.add_argument("--use_edge", type=bool, default=True)
+parser.add_argument("--use_node", type=bool, default=True)
 
 # directory position settings
 parser.add_argument("--result_save_dir", type=str, default="results")
