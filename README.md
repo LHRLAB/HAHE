@@ -85,7 +85,7 @@ python -u ./src/run.py --dataset "jf17k" --device "0" --vocab_size 29148 --vocab
                        --max_seq_len 11 --max_arity 6 --hidden_dim 256 --global_layers 2 \
                        --global_dropout 0.9 --global_activation "elu" --global_heads 4 --local_layers 12\
                        --local_dropout 0.35 --local_heads 4 --decoder_activation "gelu" --batch_size 1024 \
-                       --lr 4e-4 --weight_deca 0.002 --entity_soft 0.9 --relation_soft 0.9 \
+                       --lr 5e-4 --weight_deca 0.002 --entity_soft 0.9 --relation_soft 0.9 \
                        --hyperedge_dropout 0.85 --epoch 300 --warmup_proportion 0.05
 ```
 
