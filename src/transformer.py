@@ -213,7 +213,9 @@ class Transformer(nn.Module):
                 continue
             elif "bias" in name:
                 nn.init.zeros_(param)
-            elif "weight" in name or "att" in name or "embedding" in name:
+            elif "weight" in name or "att" in name:
+                nn.init.normal_(param, mean=0, std=0.02)
+            elif "embedding" in name:
                 nn.init.normal_(param, mean=0, std=0.02)
             else:
                 raise TypeError("Invalid Parameters")

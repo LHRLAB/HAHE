@@ -21,9 +21,10 @@ This repository contains the code and data, as well as the optimal configuration
 This project should work fine with the following environments:
 - Python 3.8.13 for data preprocessing, training and evaluation with:
     -  torch 1.10.0+cu113
-    -  toch-geometric 2.1.0.post1
     -  torch-scatter 2.0.9
     -  torch-sparse 0.6.13
+    -  torch-cluster 1.6.0
+    -  torch-geometric 2.1.0.post1
     -  numpy 1.23.3
 - GPU with CUDA 11.3
 
