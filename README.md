@@ -1,6 +1,6 @@
 # HAHE
 
-Official resources of **"HAHE: Hierarchical Attention for Hyper-Relational Knowledge Graphs in Global and Local Level"**. Haoran Luo, Haihong E, Yuhao Yang, Yikai Guo, Mingzhi Sun, Tianyu Yao, Zichen Tang, Kaiyang Wan, Meina Song, Wei Lin. **ACL 2023** \[[paper](https://arxiv.org/abs/2305.06588)\]. 
+Official resources of **"HAHE: Hierarchical Attention for Hyper-Relational Knowledge Graphs in Global and Local Level"**. Haoran Luo, Haihong E, Yuhao Yang, Yikai Guo, Mingzhi Sun, Tianyu Yao, Zichen Tang, Kaiyang Wan, Meina Song, Wei Lin. **ACL 2023** \[[paper](https://aclanthology.org/2023.acl-long.450/)\]. 
 
 ## Overview
 The Global-level Hypergraph-based representation and Local-level Sequence-based representation based
