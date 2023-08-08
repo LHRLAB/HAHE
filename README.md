@@ -122,13 +122,28 @@ python -u ./src/run.py --dataset "wd50k" --device "0" --vocab_size 47688 --vocab
 If you find this work is helpful for your research, please cite:
 
 ```bibtex
-@misc{luo2023hahe,
-      title={HAHE: Hierarchical Attention for Hyper-Relational Knowledge Graphs in Global and Local Level}, 
-      author={Haoran Luo and Haihong E and Yuhao Yang and Yikai Guo and Mingzhi Sun and Tianyu Yao and Zichen Tang and Kaiyang Wan and Meina Song and Wei Lin},
-      year={2023},
-      eprint={2305.06588},
-      archivePrefix={arXiv},
-      primaryClass={cs.AI}}
+@inproceedings{luo2023hahe,
+    title = "{HAHE}: Hierarchical Attention for Hyper-Relational Knowledge Graphs in Global and Local Level",
+    author = "Luo, Haoran  and
+      E, Haihong  and
+      Yang, Yuhao  and
+      Guo, Yikai  and
+      Sun, Mingzhi  and
+      Yao, Tianyu  and
+      Tang, Zichen  and
+      Wan, Kaiyang  and
+      Song, Meina  and
+      Lin, Wei",
+    booktitle = "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2023",
+    address = "Toronto, Canada",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.acl-long.450",
+    doi = "10.18653/v1/2023.acl-long.450",
+    pages = "8095--8107",
+    abstract = "Link Prediction on Hyper-relational Knowledge Graphs (HKG) is a worthwhile endeavor. HKG consists of hyper-relational facts (H-Facts), composed of a main triple and several auxiliary attribute-value qualifiers, which can effectively represent factually comprehensive information. The internal structure of HKG can be represented as a hypergraph-based representation globally and a semantic sequence-based representation locally. However, existing research seldom simultaneously models the graphical and sequential structure of HKGs, limiting HKGs{'} representation. To overcome this limitation, we propose a novel Hierarchical Attention model for HKG Embedding (HAHE), including global-level and local-level attention. The global-level attention can model the graphical structure of HKG using hypergraph dual-attention layers, while the local-level attention can learn the sequential structure inside H-Facts via heterogeneous self-attention layers. Experiment results indicate that HAHE achieves state-of-the-art performance in link prediction tasks on HKG standard datasets. In addition, HAHE addresses the issue of HKG multi-position prediction for the first time, increasing the applicability of the HKG link prediction task. Our code is publicly available.",
+}
 ```
 
 For further questions, please contact: luohaoran@bupt.edu.cn, or wechat: lhr1846205978.

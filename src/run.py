@@ -13,6 +13,20 @@ from reader import *
 from evaluation import *
 from transformer import *
 from graph import *
+import numpy as np
+import random
+
+# def set_seed(seed=0):
+#     random.seed(seed)
+#     os.environ['PYTHONHASHSEED'] = str(seed)
+#     np.random.seed(seed)
+#     torch.manual_seed(seed)
+#     torch.cuda.manual_seed(seed)
+#     torch.cuda.manual_seed_all(seed)
+#     torch.backends.cudnn.benchmark = False
+#     torch.backends.cudnn.deterministic = True
+
+# set_seed(119072237)
 
 parser = argparse.ArgumentParser()
 
@@ -250,15 +264,6 @@ def show_perforamance(eval_performance):
     logger.info("\n-------- Evaluation Performance --------\n%s\n%s\n%s\n%s\n%s" % (
         "\t".join([pad("TASK"), "MRR", "Hits@1", "Hits@3", "Hits@5", "Hits@10"]),
         all_ht, all_r, all_entity, all_relation))
-
-def profile():
-    from line_profiler import LineProfiler
-    lp = LineProfiler()
-    lp.add_function(predict)
-    lp.add_function(batch_evaluation)
-    wrapper = lp(main)
-    wrapper(1)
-    lp.print_stats()
 
 if __name__ == '__main__':
     logger.info('-----------  Configuration Arguments -----------')
