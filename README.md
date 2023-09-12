@@ -19,8 +19,8 @@ This repository contains the code and data, as well as the optimal configuration
 
 ## Requirements and Installation
 This project should work fine with the following environments:
-- Python 3.8.13 for data preprocessing, training and evaluation with:
-    -  torch 1.10.0+cu113
+- Python 3.9.16 for data preprocessing, training and evaluation with:
+    -  torch 1.10.0
     -  torch-scatter 2.0.9
     -  torch-sparse 0.6.13
     -  torch-cluster 1.6.0
