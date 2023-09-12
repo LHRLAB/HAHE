@@ -34,7 +34,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--dataset", type=str, default="wd50k") #"jf17k", 
 parser.add_argument("--vocab_size", type=int, default=47688) #29148
 parser.add_argument("--vocab_file", type=str, default="./data/wd50k/vocab.txt") #"./data/jf17k/vocab.txt"
-parser.add_argument("--train_file", type=str, default="./data/wd50k/train.json") #"./data/jf17k/train.json"
+parser.add_argument("--train_file", type=str, default="./data/wd50k/train+valid.json") #"./data/jf17k/train.json"
 parser.add_argument("--test_file", type=str, default="./data/wd50k/test.json") #"./data/jf17k/test.json"
 parser.add_argument("--ground_truth_file", type=str, default="./data/wd50k/all.json") #"./data/jf17k/all.json"
 parser.add_argument("--num_workers", type=int, default=1)
